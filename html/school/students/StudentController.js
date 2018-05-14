@@ -7,7 +7,7 @@ angular.module('myAPP')
         if($scope.studentId > 0) {
             $http.get("data/students.json")
                 .then(function(response) {
-                    $scope.student = response.data[0].filter(function (i, n) {
+                    $scope.student = response.data.filter(function (i, n) {
                         return i.id == $scope.studentId;    // XXX switch to ===
                     })
                 })
