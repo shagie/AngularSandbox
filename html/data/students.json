@@ -1,5 +1,5 @@
 [
-  [{
+  {
     "id": 1,
     "first_name": "Monte",
     "last_name": "Crate"
@@ -79,4 +79,4 @@
     "id": 20,
     "first_name": "Gussy",
     "last_name": "Palethorpe"
-  }]]
+  }]
