@@ -1,2 +1,9 @@
 <h1>Teachers</h1>
 {{message}}
+
+<form ng-submit="submit()" ng-controller="TeacherController">
+    <input type="text" ng-model="text" name="text" />
+    <input type="submit" id="submit" value="Submit" />
+    data = {{ teacher }}
+</form>
+
