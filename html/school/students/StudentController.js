@@ -1,6 +1,6 @@
 angular.module('myAPP')
     .controller('StudentController', function ($scope, $routeParams, $http) {
-        $scope.message = 'Look! I am an about page.';
+        $scope.message = 'Student information';
         $scope.params = $routeParams;
         $scope.studentId = $routeParams.sid;
 
