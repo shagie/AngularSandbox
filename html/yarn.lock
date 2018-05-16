@@ -13,3 +13,15 @@ angular@^1.7.0:
 bootstrap@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.1.1.tgz#3aec85000fa619085da8d2e4983dfd67cf2114cb"
+
+jquery@1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-1.9.1.tgz#e4cd4835faaefbade535857613c0fc3ff2adaf34"
+
+jsonformatter@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/jsonformatter/-/jsonformatter-0.7.0.tgz#b1bc620299cf7216b67a93cc047f8e69de6fb9c9"
+
+popper.js@^1.14.3:
+  version "1.14.3"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.14.3.tgz#1438f98d046acf7b4d78cd502bf418ac64d4f095"
