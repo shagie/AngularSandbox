@@ -4,6 +4,6 @@
 <form ng-submit="submit()" ng-controller="TeacherController">
     <input type="text" ng-model="text" name="text" />
     <input type="submit" id="submit" value="Submit" />
-    data = {{ teacher }}
+    data = <json-formatter json="teacher"></json-formatter>
 </form>
 

@@ -1,6 +1,6 @@
 'use strict';
 
-var myAPP = angular.module('myAPP', ['ngRoute']);
+var myAPP = angular.module('myAPP', ['ngRoute', 'jsonFormatter']);
 
 myAPP.config(['$routeProvider',
     function ($routeProvider) {
