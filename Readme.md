@@ -1,7 +1,7 @@
-**ngnix**
+**node**
 
 ```
-docker build -t webserver-image:nginx .
-docker run -p 80:80 --name webserver-nginx webserver-image:nginx 
-curl localhost
+docker build -t webserver-image .
+docker run -p 8080:8080 --name webserver-node webserver-image 
+curl localhost:8080
 ```
