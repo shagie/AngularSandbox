@@ -1,7 +1,6 @@
-**node**
-
 ```
-docker build -t webserver-image .
-docker run -p 8080:8080 --name webserver-node webserver-image 
+docker-compose build
+docker-compose up
 curl localhost:8080
+curl localhost:5984
 ```

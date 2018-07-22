@@ -8,7 +8,7 @@ angular.module('myAPP')
 
         $scope.submit = function() {
             if ($scope.text) {
-                $http.get("data/teachers/" + $scope.text + ".json")
+                $http.get("http://localhost:5984/teachers/" + $scope.text)
                     .then(function (response) {
                             $scope.teacher = response.data;
                         }

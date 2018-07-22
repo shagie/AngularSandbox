@@ -1,0 +1,43 @@
+version: '3.6'
+services:
+  couchdb:
+    build: ./docker/couch
+    restart: always
+    volumes:
+      - type: bind
+        source: /tmp/couch/data
+        target: /opt/couchdb/data
+#    env_file:
+#      - docker/couch/env.docker
+    ports:
+      - target: 5984
+        published: 5984
+        protocol: tcp
+        mode: host
+    networks:
+      - app-init
+
+  init:
+    build: ./docker/init
+    depends_on:
+      - couchdb
+    command: sh -c './wait-for.sh couchdb:5984 -- ./init.sh'
+    restart: "no"
+    networks:
+      - app-init
+
+  app:
+    build: .
+    image: app
+    container_name: app
+    restart: "no"
+    depends_on:
+      - couchdb
+    ports:
+      - target: 8080
+        published: 8080
+        protocol: tcp
+        mode: host
+
+networks:
+  app-init:
