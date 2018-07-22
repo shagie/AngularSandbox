@@ -1,7 +1,7 @@
 version: '3.6'
 services:
   couchdb:
-    build: ./docker/couch
+    build: ./Couchdb
     restart: always
     volumes:
       - type: bind
@@ -18,7 +18,7 @@ services:
       - app-init
 
   init:
-    build: ./docker/init
+    build: ./Init
     depends_on:
       - couchdb
     command: sh -c './wait-for.sh couchdb:5984 -- ./init.sh'
@@ -27,9 +27,7 @@ services:
       - app-init
 
   app:
-    build: .
-    image: app
-    container_name: app
+    build: ./App
     restart: "no"
     depends_on:
       - couchdb
