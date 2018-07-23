@@ -16,6 +16,7 @@ services:
         mode: host
     networks:
       - app-init
+      - proxy
 
   init:
     build: ./Init
@@ -36,6 +37,23 @@ services:
         published: 8080
         protocol: tcp
         mode: host
+    networks:
+      - proxy
+
+  nginx:
+    build: ./Proxy
+    restart: always
+    networks:
+      - proxy
+    depends_on:
+      - couchdb
+      - app
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+        mode: host
 
 networks:
   app-init:
+  proxy:
