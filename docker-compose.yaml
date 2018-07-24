@@ -9,11 +9,11 @@ services:
         target: /opt/couchdb/data
 #    env_file:
 #      - docker/couch/env.docker
-    ports:
-      - target: 5984
-        published: 5984
-        protocol: tcp
-        mode: host
+#    ports:
+#      - target: 5984
+#        published: 5984
+#        protocol: tcp
+#        mode: host
     networks:
       - app-init
       - proxy
@@ -32,11 +32,11 @@ services:
     restart: "no"
     depends_on:
       - couchdb
-    ports:
-      - target: 8080
-        published: 8080
-        protocol: tcp
-        mode: host
+#    ports:
+#      - target: 8080
+#        published: 8080
+#        protocol: tcp
+#        mode: host
     networks:
       - proxy
 
